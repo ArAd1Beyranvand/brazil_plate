@@ -1,4 +1,4 @@
-/// Brazil's licence plates for the `core_plate` library.
+/// Brazil's licence plates for the `plate_core` library.
 ///
 /// The Mercosul plate, `ABC1D23` under the blue BRASIL band, in its seven
 /// category colours. The 1901–2018 series are not implemented.
