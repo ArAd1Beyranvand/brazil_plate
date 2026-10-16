@@ -1,8 +1,7 @@
 import 'package:plate_core/plate_core.dart';
 
 /// Judges a `BrazilPlates` value, `LLL N L NN`. Reports, never bars a
-/// keystroke. Whether the series has been allocated is not checked — see
-/// `BrazilSeries.stateOf`.
+/// keystroke; series allocation is not checked (see `BrazilSeries.stateOf`).
 class BrazilPlateValidator extends GatedPlateValidator {
   const BrazilPlateValidator();
 
@@ -15,6 +14,7 @@ class BrazilPlateValidator extends GatedPlateValidator {
 
   static final RegExp _series = RegExp(r'^[A-Z]{3}$');
   static final RegExp _number = RegExp(r'^[0-9][A-Z][0-9]{2}$');
+  static final RegExp _legacy = RegExp(r'^[A-Z]{3}[0-9]{4}$');
 
   @override
   PlateValidation judge(PlateEntry entry) {
@@ -31,7 +31,7 @@ class BrazilPlateValidator extends GatedPlateValidator {
   /// second digit becomes a letter, 0 → A through 9 → J. Null if [legacy] is
   /// not three letters and four digits.
   static String? fromLegacy(String legacy) {
-    if (!RegExp(r'^[A-Z]{3}[0-9]{4}$').hasMatch(legacy)) return null;
+    if (!_legacy.hasMatch(legacy)) return null;
     final String letter = String.fromCharCode(
       'A'.codeUnitAt(0) + legacy.codeUnitAt(4) - '0'.codeUnitAt(0),
     );

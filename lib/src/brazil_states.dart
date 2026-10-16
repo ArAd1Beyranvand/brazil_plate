@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
-/// One of Brazil's 27 federative units. The Mercosul plate does not print
-/// it — the state is implied by the series, see [BrazilSeries.stateOf].
+/// One of Brazil's 27 federative units. The plate does not print it; the
+/// series implies it, see [BrazilSeries.stateOf].
 @immutable
 class BrazilState {
   const BrazilState(this.code, this.name);
@@ -77,8 +77,7 @@ abstract final class BrazilSeries {
   /// The state whose block contains [value], a full `LLLNLNN` registration,
   /// or null for a series not yet allocated (or a malformed value).
   ///
-  /// Informational: a plate from an unallocated series is not invalid, the
-  /// table simply has not caught up.
+  /// Informational: a plate from an unallocated series is not invalid.
   static BrazilState? stateOf(String value) {
     if (value.length != 7) return null;
     int lo = 0;

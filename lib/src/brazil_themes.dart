@@ -3,15 +3,12 @@ import 'package:plate_core/plate_core.dart';
 
 import 'brazil_colors.dart';
 
-/// One ink on one field, framed in a lighter print of the ink — the seven
-/// Mercosul categories. Every category shares one layout; this is the only
-/// place they differ (plus the national collector plate's spec, see
+/// The seven Mercosul categories: one ink on one field, framed in a lighter
+/// print of the ink. Categories share one layout and differ only here (and in
 /// `BrazilPlates.mercosulNational`).
 ///
-/// Off `Placas_Mercosul_2022.jpg` normalised to 400×130: the printed rim is
-/// ~6 mm including its pale textured inner margin, but the solid edge is
-/// ~4 mm, 0.03 of the height — the wider figure buried `BR`, which is printed
-/// 8.7 mm from the edge. The outer corner turns over ~15 px, 8 mm, 0.06.
+/// The border is the solid edge (~4 mm, 0.03 of the height), not the ~6 mm rim
+/// with its pale margin, which would bury `BR`.
 abstract final class BrazilThemes {
   static const double _border = 0.03;
   static const double _radius = 0.06;

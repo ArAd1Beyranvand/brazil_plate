@@ -2,12 +2,11 @@ import 'package:plate_core/plate_core.dart';
 
 import 'brazil_colors.dart';
 
-/// Brazil as a `PlateCountry`. The panel is the flag in its thin white
-/// outline at the band's right end; there is no caption — `BRASIL` is a label
-/// on the spec, centred on the band.
+/// The panel is the flag in a thin white outline at the band's right end;
+/// `BRASIL` is a label on the spec, so there is no caption.
 ///
-/// The flag is the SVG asset rather than painted sections: its rhombus and
-/// starred globe are not something a `PlateSection` can draw.
+/// The flag is an SVG asset because a `PlateSection` cannot draw its rhombus
+/// and starred globe.
 abstract final class BrazilCountry {
   static const PlateCountry brazil = PlateCountry(
     code: 'br',

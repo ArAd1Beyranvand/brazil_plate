@@ -1,17 +1,12 @@
 import 'package:flutter/widgets.dart';
 
-/// The colours of Brazil's Mercosul plates.
-///
-/// Every value is sampled from the article's category artwork,
-/// `Placas_Mercosul_2022.jpg` — seven plates, one per colour scheme, drawn
-/// flat. Inks are the modal colour of the serial's ink pixels (the
-/// holographic `MERCOSUL BRASIL` watermark lightens a median); frames are the
-/// median of the left rim, which is printed in a lighter, textured version of
-/// the ink. The photograph `Brazilian_vehicle_license_plate_(2018-).jpg`
-/// agrees on the layout but is lit: its band samples `0C3CC0` and its field a
-/// grey `BCC0BC`, so it is not used for colour.
+/// Sampled from the flat category artwork `Placas_Mercosul_2022.jpg`. Inks are
+/// the modal colour of the serial's ink pixels (the holographic watermark
+/// lightens a median); frames are the median of the left rim, a lighter
+/// textured print of the ink. The lit photograph of the plate is not used for
+/// colour.
 abstract final class BrazilColors {
-  /// The band across the top, `0736A2`, the same on every category.
+  /// The band across the top, the same on every category.
   static const Color band = Color(0xFF0736A2);
 
   static const Color white = Color(0xFFFFFFFF);

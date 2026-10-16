@@ -7,11 +7,9 @@ import 'brazil_country.dart';
 
 /// Where the ink sits on a Mercosul plate, in millimetres.
 ///
-/// Measured off `Placas_Mercosul_2022.jpg` (seven flat plates, 733 px wide)
-/// by normalising each plate rectangle to the article's 400×130. The artwork
-/// is drawn at 3.16 against the documented 3.08, so x positions carry ~2%.
-/// The photograph `Brazilian_vehicle_license_plate_(2018-).jpg` agrees within
-/// 1.5 mm.
+/// Measured off `Placas_Mercosul_2022.jpg` by normalising each plate
+/// rectangle to 400×130. The artwork is drawn at 3.16 against the documented
+/// 3.08, so x positions carry ~2%.
 ///
 /// * Band: y 0..35.3, `0736A2`, edge to edge — a background row, not a box.
 /// * `BRASIL`: white ink x 169.7..236.8, y 17.4..30.8 (centre 203.3, 24.1),
@@ -32,9 +30,8 @@ import 'brazil_country.dart';
 /// **Under-height serial and `BR`, accepted.** The plate face is a condensed
 /// 33 mm wide, 66 mm tall glyph. A slot scales its glyph down to fit its
 /// cell, and DejaVu Bold is wider, so the serial is width-limited: ink
-/// y 58.5..103.9, 69% of the reference height, centred within 1 mm — as on
-/// Bolivia's Mercosur plate. `BR` is boxed to its measured width and comes out
-/// ~78% tall. `plate_core` is unchanged.
+/// y 58.5..103.9, 69% of the reference height, centred within 1 mm. `BR` is
+/// boxed to its measured width and comes out ~78% tall.
 ///
 /// **Not drawn.** The QR code (x 10..41, y 37..66, unique per plate), the
 /// logo's arc under the stars, and the holographic watermark.
@@ -71,11 +68,9 @@ abstract final class _Layout {
 }
 
 abstract final class BrazilPlates {
-  /// The Mercosul plate, `ABC1D23`, every category but the national
-  /// collector one. The category is the theme (`BrazilThemes`); `BR` stays
-  /// black whatever the ink.
-  ///
-  /// Slots: the three series letters, then digit, letter, digit, digit.
+  /// The Mercosul plate, `ABC1D23`, for every category but the national
+  /// collector one; the category is the theme. `BR` stays black whatever the
+  /// ink. Slots: the three series letters, then digit, letter, digit, digit.
   static final PlateSpec mercosul = _mercosul(
     id: 'br.mercosul',
     logo: true,
