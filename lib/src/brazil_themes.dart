@@ -37,16 +37,10 @@ abstract final class BrazilThemes {
 
   /// Red on white: paid transport and driving schools (*aluguel*,
   /// *aprendizagem*).
-  static final PlateTheme commercial = _livery(
-    ink: BrazilColors.red,
-    frame: BrazilColors.redFrame,
-  );
+  static final PlateTheme commercial = _livery(ink: BrazilColors.red, frame: BrazilColors.redFrame);
 
   /// Blue on white: government vehicles (*oficial*).
-  static final PlateTheme official = _livery(
-    ink: BrazilColors.blue,
-    frame: BrazilColors.blueFrame,
-  );
+  static final PlateTheme official = _livery(ink: BrazilColors.blue, frame: BrazilColors.blueFrame);
 
   /// Gold on white: diplomatic vehicles (*diplomático*).
   static final PlateTheme diplomatic = _livery(
@@ -56,10 +50,7 @@ abstract final class BrazilThemes {
 
   /// Green on white: manufacturers' and dealers' test vehicles
   /// (*experiência*, *fabricante*).
-  static final PlateTheme dealer = _livery(
-    ink: BrazilColors.green,
-    frame: BrazilColors.greenFrame,
-  );
+  static final PlateTheme dealer = _livery(ink: BrazilColors.green, frame: BrazilColors.greenFrame);
 
   /// Grey on white: collector vehicles free to cross borders (*coleção*).
   static final PlateTheme collector = _livery(
