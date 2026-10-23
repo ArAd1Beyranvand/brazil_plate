@@ -1,7 +1,7 @@
 name: brazil_plate
 description: "Brazil's licence plates for the plate_core library — the Mercosul plate in its seven category colours."
 version: 0.1.0
-publish_to: none
+repository: https://github.com/ArAd1Beyranvand/brazil_plate
 resolution: workspace
 
 environment:
