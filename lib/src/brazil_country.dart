@@ -14,6 +14,9 @@ abstract final class BrazilCountry {
     panelColor: BrazilColors.bandInk,
     panelTextColor: BrazilColors.band,
     flagAspectRatio: 10 / 7,
-    flag: SvgPlateAsset('assets/flags/Flag_of_Brazil.svg', package: 'brazil_plate'),
+    flag: SvgPlateAsset(
+      'assets/flags/Flag_of_Brazil.svg',
+      package: 'brazil_plate',
+    ),
   );
 }

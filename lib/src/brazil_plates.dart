@@ -80,18 +80,31 @@ abstract final class BrazilPlates {
   /// The collector plate restricted to Brazil: white on black, and no
   /// Mercosul logo since it may not cross the border. Pair with
   /// `BrazilThemes.collectorNational`.
-  static final PlateSpec mercosulNational = _mercosul(id: 'br.mercosul.national', logo: false);
+  static final PlateSpec mercosulNational = _mercosul(
+    id: 'br.mercosul.national',
+    logo: false,
+  );
 
   static final List<PlateSpec> all = <PlateSpec>[mercosul, mercosulNational];
 
-  static PlateSpec _mercosul({required String id, required bool logo, Color? codeInk}) => PlateSpec(
+  static PlateSpec _mercosul({
+    required String id,
+    required bool logo,
+    Color? codeInk,
+  }) => PlateSpec(
     id: id,
     country: BrazilCountry.brazil,
     canvasWidth: _Layout.width,
     canvasHeight: _Layout.height,
-    panel: const PlatePanel(box: _Layout.flag, padding: EdgeInsets.all(_Layout.flagOutline)),
+    panel: const PlatePanel(
+      box: _Layout.flag,
+      padding: EdgeInsets.all(_Layout.flagOutline),
+    ),
     background: const PlateSection.rows(<PlatePart>[
-      PlatePart(PlateSection.fill(PlateFill.color(BrazilColors.band)), end: _Layout.band),
+      PlatePart(
+        PlateSection.fill(PlateFill.color(BrazilColors.band)),
+        end: _Layout.band,
+      ),
       PlatePart(PlateSection.plain),
     ]),
     labels: <PlateLabel>[
@@ -111,12 +124,22 @@ abstract final class BrazilPlates {
         for (final (double x, double y) in _Layout.stars)
           PlateLabel(
             text: '✦',
-            box: PlateBox(x - _Layout.star / 2, y - _Layout.star / 2, _Layout.star, _Layout.star),
+            box: PlateBox(
+              x - _Layout.star / 2,
+              y - _Layout.star / 2,
+              _Layout.star,
+              _Layout.star,
+            ),
             glyphHeight: _Layout.starGlyph,
             color: BrazilColors.bandInk,
           ),
       ],
-      PlateLabel(text: 'BR', box: _Layout.code, glyphHeight: _Layout.codeGlyph, color: codeInk),
+      PlateLabel(
+        text: 'BR',
+        box: _Layout.code,
+        glyphHeight: _Layout.codeGlyph,
+        color: codeInk,
+      ),
     ],
     slots: <PlateSlot>[
       for (final (int i, PlateAlphabet a) in const <PlateAlphabet>[

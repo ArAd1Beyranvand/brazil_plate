@@ -9,7 +9,8 @@ class BrazilPlateValidator extends GatedPlateValidator {
   String get gateGroup => 'number';
 
   static const String reasonSeries = 'The series is three letters.';
-  static const String reasonNumber = 'The number is a digit, a letter and two digits.';
+  static const String reasonNumber =
+      'The number is a digit, a letter and two digits.';
 
   static final RegExp _series = RegExp(r'^[A-Z]{3}$');
   static final RegExp _number = RegExp(r'^[0-9][A-Z][0-9]{2}$');
