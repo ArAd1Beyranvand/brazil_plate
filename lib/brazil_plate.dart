@@ -4,6 +4,9 @@
 /// category colours. The 1901–2018 series are not implemented.
 library;
 
+// TODO(py): [D5] one module `plates.countries.brazil`; assets via importlib.resources.
+// TODO(ts): [D5] one subpath export `./countries/brazil`; tree-shakable.
+// TODO(kt): [D5] package `countries.brazil` in the countries module.
 export 'src/brazil_alphabets.dart';
 export 'src/brazil_colors.dart';
 export 'src/brazil_country.dart';

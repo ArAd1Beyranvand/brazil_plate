@@ -14,6 +14,9 @@ abstract final class BrazilCountry {
     panelColor: BrazilColors.bandInk,
     panelTextColor: BrazilColors.band,
     flagAspectRatio: 10 / 7,
+    // TODO(py): [H20][D6] flag asset by package + path; convert to PlateDrawing at export time.
+    // TODO(ts): [H20][D6] flag asset by package + path; convert to PlateDrawing at export time.
+    // TODO(kt): [H20][D6] flag asset by package + path; convert to PlateDrawing at export time.
     flag: SvgPlateAsset(
       'assets/flags/Flag_of_Brazil.svg',
       package: 'brazil_plate',
