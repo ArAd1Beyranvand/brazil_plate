@@ -36,9 +36,7 @@ import 'brazil_country.dart';
 /// **Not drawn.** The QR code (x 10..41, y 37..66, unique per plate), the
 /// logo's arc under the stars, and the holographic watermark.
 abstract final class _Layout {
-  static const double width = 400;
-  static const double height = 130;
-  static const double band = 35.3;
+  static const double width = 400, height = 130, band = 35.3;
 
   static const PlateBox brasil = PlateBox(163.3, 13.1, 80, 22);
   static const double brasilGlyph = 24.4;
@@ -55,13 +53,10 @@ abstract final class _Layout {
     (29.7, 15.4),
     (34.1, 21.7),
   ];
-  static const double star = 4;
-  static const double starGlyph = 4;
+  static const double star = 4, starGlyph = 4;
 
-  static const double pitch = 47.5;
-  static const double serialLeft = 59.5 - pitch / 2;
-  static const double serialTop = 39.9;
-  static const double serialHeight = 83.4;
+  static const double pitch = 47.5, serialLeft = 59.5 - pitch / 2;
+  static const double serialTop = 39.9, serialHeight = 83.4;
 
   static const PlateBox code = PlateBox(6.5, 99.3, 21.3, 22);
   static const double codeGlyph = 27.3;
@@ -124,12 +119,7 @@ abstract final class BrazilPlates {
         for (final (double x, double y) in _Layout.stars)
           PlateLabel(
             text: '✦',
-            box: PlateBox(
-              x - _Layout.star / 2,
-              y - _Layout.star / 2,
-              _Layout.star,
-              _Layout.star,
-            ),
+            box: PlateBox.centered(x, y, _Layout.star, _Layout.star),
             glyphHeight: _Layout.starGlyph,
             color: BrazilColors.bandInk,
           ),

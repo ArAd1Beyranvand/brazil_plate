@@ -7,8 +7,7 @@ class BrazilState {
   const BrazilState(this.code, this.name);
 
   /// The two-letter UF abbreviation.
-  final String code;
-  final String name;
+  final String code, name;
 
   static const BrazilState ac = BrazilState('AC', 'Acre');
   static const BrazilState al = BrazilState('AL', 'Alagoas');

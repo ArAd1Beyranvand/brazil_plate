@@ -6,13 +6,24 @@ GO VEGAN 🌱
 
 From the mighty people of Iran to the joyful people of Brazil to view examples:
 
-https://platexample.ir/#/discover/brazil
+https://platexample.ir/#/discover/brazil:flutter
 
 # brazil_plate
 
-Brazil's licence plates for the `plate_core` library. The Mercosul plate, `ABC1D23` under the blue BRASIL band, in its seven category colours. The 1901–2018 series are not implemented.
+Brazil's licence plates for the plate_core library — the Mercosul plate in its seven category colours.
 
-## Install
+## Languages
+
+| Language | Folder | Example |
+| --- | --- | --- |
+| Flutter / Dart | [`flutter/`](https://github.com/ArAd1Beyranvand/brazil_plate/tree/main/flutter) | [platexample](https://platexample.ir/#/discover/brazil:flutter) |
+| Kotlin | [`kotlin/`](https://github.com/ArAd1Beyranvand/brazil_plate/tree/main/kotlin) | [platexample](https://platexample.ir/#/discover/brazil:kotlin) |
+| Python | [`python/`](https://github.com/ArAd1Beyranvand/brazil_plate/tree/main/python) | [platexample](https://platexample.ir/#/discover/brazil:python) |
+| TypeScript | [`typescript/`](https://github.com/ArAd1Beyranvand/brazil_plate/tree/main/typescript) | [platexample](https://platexample.ir/#/discover/brazil:typescript) |
+
+## Quick start
+
+### Install
 
 ```yaml
 dependencies:
@@ -20,7 +31,7 @@ dependencies:
   brazil_plate: ^0.1.0
 ```
 
-## Use
+### Use
 
 ```dart
 import 'package:plate_core/plate_core.dart';
@@ -35,15 +46,36 @@ PlateCanvas(
 );
 ```
 
-## Contains
+## Specs
 
-- `BrazilCountry` — country panel: `brazil`.
-- `BrazilPlates` — 2 plate specs: `mercosul`, `mercosulNational`.
-- `BrazilThemes` — 7 themes: `private`, `commercial`, `official`, `diplomatic`, `dealer`, `collector`, `collectorNational`.
-- `BrazilPlateValidator` — advisory validator; flags the frame, never blocks a keystroke.
-- 1 bundled asset (`Flag_of_Brazil.svg`).
+Each spec is one plate layout.
+
+- `BrazilPlates.mercosul` — id `br.mercosul`
+- `BrazilPlates.mercosulNational` — id `br.mercosul.national`
+
+## Themes
+
+- `BrazilThemes.private`
+- `BrazilThemes.commercial`
+- `BrazilThemes.official`
+- `BrazilThemes.diplomatic`
+- `BrazilThemes.dealer`
+- `BrazilThemes.collector`
+- `BrazilThemes.collectorNational`
+
+## Change it
+
+`PlateCanvas` takes `spec:` (an entry of `BrazilPlates`) and `theme:` (an entry of `BrazilThemes`). Set `validator:` to `BrazilPlateValidator()` and `autoValidate: true` to show validation hints.
+
+## Also included
+
+- `BrazilCountry` — the country panel.
+- `BrazilPlateValidator` — the plate validator.
 
 ## Part of plate
 
 Painted by [`plate_core`](https://pub.dev/packages/plate_core); alphabets shared through [`plate_alphabet`](https://pub.dev/packages/plate_alphabet); optional character picker in [`plate_keypad`](https://pub.dev/packages/plate_keypad).
 
+## License
+
+See [LICENSE](https://github.com/ArAd1Beyranvand/brazil_plate/blob/main/LICENSE).

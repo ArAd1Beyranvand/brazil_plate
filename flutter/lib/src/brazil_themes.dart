@@ -10,8 +10,7 @@ import 'brazil_colors.dart';
 /// The border is the solid edge (~4 mm, 0.03 of the height), not the ~6 mm rim
 /// with its pale margin, which would bury `BR`.
 abstract final class BrazilThemes {
-  static const double _border = 0.03;
-  static const double _radius = 0.06;
+  static const double _border = 0.03, _radius = 0.06;
 
   static PlateTheme _livery({
     required Color ink,
